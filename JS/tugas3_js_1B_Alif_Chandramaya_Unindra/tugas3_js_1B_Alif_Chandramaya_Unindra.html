@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi FB</title>
+</head>
+
+<body style="width: auto;">
+    <div
+        style="width: 374px; margin-left: 35%; border: 1px solid rgb(231, 231, 231); border-collapse: collapse; border-radius: 10px; box-shadow: 1px 5px 2px rgba(197, 197, 197, 0.4);">
+        <h1 style="margin: 10px 0 10px 10px ;">Sign Up</h1>
+        <p style="margin: 0 0 15px 10px;">It's quick and easy.</p>
+        <hr>
+        <form>
+            <table width="374px">
+                <tr>
+                    <td>
+                        <input type="text" id="nama" placeholder="First Name"
+                            style="width: 168px; height: 30px; margin-left: 5px; padding-left: 5px; background-color: rgb(243, 243, 243); border-radius: 5px; border: 0.5px solid grey;">
+                    </td>
+                    <td>
+                        <input type="text" id="surnama" placeholder="Surname"
+                            style="width: 168px; height: 30px; padding-left: 5px; background-color: rgb(243, 243, 243); border-radius: 5px; border: 0.5px solid grey;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="text" id="phonemail" placeholder="Mobile number or email address"
+                            style="margin-left: 5px; width: 349px; height: 30px; margin-top: 5px; padding-left: 7px; background-color: rgb(243, 243, 243); border-radius: 5px; border: 0.5px solid grey;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="text" id="pass" placeholder="New password"
+                            style="margin-left: 5px; width: 349px; height: 30px; margin-top: 5px; padding-left: 7px; background-color: rgb(243, 243, 243); border-radius: 5px; border: 0.5px solid grey;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <p style="margin: 5px 0 -5px 5px">Date of birth</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <span id="dates"></span>
+                        <span id="months" style="margin-left: 61px;"></span>
+                        <span id="years" style="margin-left: 119px;"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p style="margin: 5px 0 0 5px;">Gender</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="gend"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="margin-top: -10px;">
+                        <p style="font-size: x-small; margin: 10px 0 10px 5px;">By clicking Sign Up, you agree to our
+                            Terms, Data Policy and Cookie Policy. You may receive SMS notifications from us and can opt
+                            out at any time</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" colspan="2">
+                        <button type="submit"
+                            style="width: 180px; height: 40px; border-radius: 8px; border: 0.5px solid grey; background-color: rgb(28, 182, 28); color: white; font-size: large; margin-bottom: 20px; font-weight: bold;">Sign
+                            Up</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script>
+        let text = "";
+        let select1 =
+            "<select style='width: 115px; height: 30px; margin-left: 5px; border-radius: 4px; border: 0.5px solid grey;'>";
+        let select2 = "</select>";
+
+        function dates() {
+            let i = 1;
+            while (i < 32) {
+                text += "<option>" + i + "</option>";
+                i++;
+            }
+            document.getElementById("dates").innerHTML = select1 + text + select2;
+        }
+        dates();
+
+        const bulan = ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agu", "Sep", "Oct", "Nov", "Dec"];
+        let tex = "";
+        select1 =
+            "<select style='width: 115px; height: 30px; margin-left: -59px; border-radius: 4px; border: 0.5px solid grey;'>";
+        select2 = "</select>";
+
+        function months() {
+            for (let j in bulan) {
+                tex += "<option>" + bulan[j] + "</option>";
+            }
+            document.getElementById("months").innerHTML = select1 + tex + select2;
+        }
+        months();
+
+        let tek = "";
+        select1 =
+            "<select style='width: 115px; height: 30px; margin-left: -118px; border-radius: 4px; border: 0.5px solid grey;'>";
+        select2 = "</select>";
+
+        function years() {
+            for (let k = 2022; k > 1922; k--) {
+                if (k > 2009) {
+                    continue;
+                }
+                if (k < 1962) {
+                    break;
+                }
+                if (k > 1962 && k < 2009)
+                    tek += "<option>" + k + "</option>";
+            }
+            document.getElementById("years").innerHTML = select1 + tek + select2;
+        }
+        years();
+
+        const gende = ["Female", "Male"];
+        let inp = "";
+        function gender() {
+            for (let l in gende) {
+                inp += "<div style='border: 1px solid grey; float: left; margin-left: 30px; height: 30px; padding-top: 5px; border-radius: 5px;'>" + "<label style='margin: 0 0 0 5px; font-size: 22px;'> "+ gende[l] + "</label>" + "<input type='radio' name='gender' style='margin-left: 60px;'/>" + "</div>";
+            }
+            document.getElementById("gend").innerHTML = inp;
+        }
+        gender();
+    </script>
+</body>
+
+</html>

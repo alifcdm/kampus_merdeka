@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Toko Buah</title>
+</head>
+
+<body>
+    <div>
+        <table align="center" cellpadding="3px">
+            <thead>
+                <tr>
+                    <th>Selamat Datang di Toko Buah Amanah</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Masukan Nama Anda: </td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="nama"></td>
+                </tr>
+                <tr>
+                    <td>Pilih Buah Yang Ingin Dibeli</td>
+                </tr>
+                <tr>
+                    <td><select name="buah" id="buah" required>
+                            <option>--Pilih Buah--</option>
+                            <option value="Jeruk">Jeruk</option>
+                            <option value="Mangga">Mangga</option>
+                            <option value="Apel">Apel</option>
+                            <option value="Anggur">Anggur</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>Jumlah Yang Ingin Dibeli</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="jmlh" style="width: 50px; text-align: right;"> Kg</td>
+                </tr>
+                <tr>
+                    <td><button onclick="hitung()"
+                            style="width: 80px; height: 30px; background-color: rgb(241, 241, 241);">Hitung</button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot >
+                <tr>
+                    <td>Hai, <h4 id="name"></h4></td>
+                </tr>
+                <tr>
+                    <td>Buah yang kamu dibeli adalah <input type="text" id="dipilih" disabled
+                            style="width: 70px; text-align: center;">, Harganya = Rp. <input type="text" id="harga"
+                            disabled>/Kg</td>
+                </tr>
+                <tr>
+                    <td>Total Yang Harus Kamu Bayarkan Rp. <input type="text" id="total" disabled></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <script>
+        let pilih;
+        let jumlah;
+        let harga;
+        let total;
+        function hitung() {
+            let id_name = document.getElementById("nama").value;
+            document.getElementById("name").innerHTML = id_name;
+
+            pilih = document.getElementById("buah").value;
+            jumlah = parseFloat(document.getElementById("jmlh").value);
+
+            if (pilih == "Jeruk") {
+                harga = 15000;
+                total = harga * jumlah;
+            } else if (pilih == "Mangga") {
+                harga = 20000;
+                total = harga * jumlah;
+            } else if (pilih == "Apel") {
+                harga = 25000;
+                total = harga * jumlah;
+            } else if (pilih == "Anggur") {
+                harga = 30000;
+                total = harga * jumlah;
+            } else {
+                alert("Silahkan Pilih Buah Terlebih Dahulu")
+            }
+            let dipilih = pilih;
+            document.getElementById('dipilih').value = dipilih;
+            document.getElementById('harga').value = harga;
+            document.getElementById('total').value = total;
+        }
+    </script>
+</body>
+
+</html>

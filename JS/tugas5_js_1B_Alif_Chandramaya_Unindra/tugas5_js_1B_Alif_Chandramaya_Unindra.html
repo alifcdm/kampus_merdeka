@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Toko Online</title>
+
+    <!-- SweetAlert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <style>
+        body {
+            font-family: cursive;
+        }
+
+        #tab {
+            margin: auto;
+            align-items: center;
+            padding: 10px 20px 20px 40px;
+            border: 1px solid black;
+            max-width: 250px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 10px rgba(197, 197, 197, 0.4);
+        }
+
+        select {
+            width: 207px;
+            height: 35px;
+            text-align: center;
+            border-radius: 5px;
+            background-color: rgb(233, 233, 233);
+        }
+
+        input {
+            width: 200px;
+            height: 32px;
+            text-align: center;
+            border: 1px solid grey;
+            border-radius: 5px;
+            background-color: rgb(233, 233, 233);
+        }
+
+        h1 {
+            margin-left: -10px;
+        }
+
+        button {
+            text-align: center;
+            border-radius: 5px;
+            width: 100px;
+            height: 40px;
+            margin-left: 50px;
+            border: 1px solid grey;
+            background-color: rgb(28, 182, 28);
+            color: white;
+            font-weight: bold;
+            font-size: large;
+            letter-spacing: 2px;
+            font-family: cursive;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="tab">
+        <h1>Toko Online Merbabu</h1>
+        <form id="formulir">
+            <table cellspacing="10px">
+                <tr>
+                    <td><label for="nama">Nama</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="nama" placeholder="ex: Alif cm"></td>
+                </tr>
+                <tr>
+                    <td><label for="barang">Pilih Barang</label></td>
+                </tr>
+                <tr id="brg"></tr>
+                <tr>
+                    <td><label for="jmlh">Jumlah</label></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="jmlh" placeholder="ex: 10"></td>
+                </tr>
+                <tr>
+                    <td><button onclick="proses()">Proses</button></td>
+                </tr>
+            </table>
+        </form>
+    </section>
+    <script src="js.js"></script>
+    <script src="sweetalert2.min.js"></script>
+</body>
+
+</html>

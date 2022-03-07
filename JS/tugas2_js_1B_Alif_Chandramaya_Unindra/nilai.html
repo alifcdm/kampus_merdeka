@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nilai</title>
+</head>
+
+<body>
+    <div class="form" style="margin-left: 40%; margin-top: 5%; margin-bottom: 50px;">
+        <form>
+            <p>
+                <label>Masukkan Nama Anda: </label>
+                <br>
+                <input type="text" id="name" placeholder="example : Alif Cm"
+                    style="height: 30px; padding-left: 10px; width: 200px; text-align: center;" required>
+            </p>
+            <p>
+                <label>Mata Kuliah: </label>
+                <br>
+                <select name="matkul" id="matkul" style="height: 30px; width: 217px; text-align: center;">
+                    <option>--Pilih Mata Kuliah--</option>
+                    <option>Programming</option>
+                    <option>Graphic Design</option>
+                    <option>Calculus</option>
+                </select>
+            </p>
+            <p>
+                <label>Masukkan Nilai: </label>
+                <br>
+                <input type="text" id="nilai1" placeholder="example: 0.1 - 100"
+                    style="height: 30px; text-align: center; width: 210px;" required>
+            </p>
+            <p>
+                <button type="button" onclick="input()"
+                    style="height: 35px; width: 90px; border-radius: 5px; margin-left: 65px;">Submit</button>
+            </p>
+        </form>
+    </div>
+    <div id="result" style="margin-left: 40%;">
+    </div>
+    <script>
+        let grade;
+        let predikat;
+        let matkul;
+        let nilai;
+        var error = "";
+
+        function input() {
+            //Ambil Name
+            let id_name = document.getElementById("name").value;
+
+            //Ambil Keterangan
+            let ket = (nilai >= 60) ? "Lulus" : "Tidak Lulus";
+
+            //Ambil Matkul
+            matkul = document.getElementById("matkul").value;
+            //if Grade == Nilai
+            if (matkul !== "--Pilih Mata Kuliah--") {
+                //Ambil Nilai
+                nilai = parseFloat(document.getElementById("nilai1").value);
+
+                if (nilai > 85 && nilai <= 100) {
+                    grade = "A";
+                } else if (nilai > 75 && nilai <= 85) {
+                    grade = "B";
+                } else if (nilai > 60 && nilai <= 75) {
+                    grade = "C";
+                } else if (nilai > 30 && nilai <= 60) {
+                    grade = "D";
+                } else if (nilai >= 0 && nilai <= 30) {
+                    grade = "E";
+                } else {
+                    error = "Silahkan Isi Semua Data";
+                    alert(error);
+                    return false;
+                }
+            } else {
+                error = "Silahkan Isi Semua Data";
+                document.getElementById("result").innerHTML = error;
+                return false;
+            }
+            //Switch Predikat
+            switch (grade) {
+                case "A":
+                    predikat = "Memuaskan";
+                    break;
+                case "B":
+                    predikat = "Baik";
+                    break;
+                case "C":
+                    predikat = "Cukup";
+                    break;
+                case "D":
+                    predikat = "Kurang";
+                    break;
+                case "E":
+                    predikat = "Buruk";
+                    break;
+                default:
+                    alert("Silahkan Input Nilai");
+            }
+
+            //Output/Result dari input dan variable yang ada
+            document.getElementById("result").innerHTML = "<p>" + "Hai, " + id_name + "</p><p>" +
+                "Mata Kuliah: " + matkul + "</p><p>" + "Grade Anda: " + grade + "</p><p>" +
+                "Nilai Anda: " + nilai + "</p><p>" + "Keterangan: " + ket + "</p><p>" + "Predikat Anda: " + predikat +
+                "</p>";
+        }
+    </script>
+</body>
+
+</html>

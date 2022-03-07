@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table align="center" width="1000px" height="300px" border="1" cellpadding="5" cellspacing="1"
+        style="margin-top: 50px;">
+        <thead height="40px">
+            <tr id="judul"></tr>
+        </thead>
+        <tbody id="data"></tbody>
+    </table>
+
+    <script>
+        let karyawan = {
+            Budi: "Manager",
+            Siti: "Manager",
+            Andi: "Kabag",
+            Deden: "Asisten Manager",
+            Wawan: "Staff",
+            Mimin: "Staff"
+        };
+
+        let judul = ["No.", "Nama", "Jabatan", "Gaji Pokok", "Tunjangan Jabatan", "Total Gaji"];
+        let th = "";
+        for (let i of judul) {
+            th += `<th>${i}</th>`;
+        }
+        document.getElementById("judul").innerHTML = th;
+
+        let no = 1;
+        let td = "";
+        let rupiah = Intl.NumberFormat('id-ID');
+        for (let j of Object.keys(karyawan)) {
+            let gapok;
+            let jabatan = karyawan[j];
+
+            switch (jabatan) {
+                case "Manager":
+                    gapok = 20000000;
+                    break;
+                case "Asisten Manager":
+                    gapok = 15000000;
+                    break;
+                case "Kabag":
+                    gapok = 10000000;
+                    break;
+                case "Staff":
+                    gapok = 5000000;
+                    break;
+                default:
+                    alert("Anda Tidak Memiliki Jabatan!");
+                    break;
+            }
+            let warna = (no % 2 == 1) ? "yellowgreen" : "#FFF89A";
+
+            let tunjab = gapok * 20 / 100;
+
+            let totalGaji = gapok + tunjab;
+            td += `<tr bgcolor="${warna}">
+            <td align='center'>${no++}</td>
+            <td>${j}</td>
+            <td>${karyawan[j]}</td>
+            <td>Rp. ${rupiah.format(gapok)}</td>
+            <td>Rp. ${rupiah.format(tunjab)}</td>
+            <td>Rp. ${rupiah.format(totalGaji)}</td>
+            </tr>`;
+        }
+        document.getElementById("data").innerHTML = td;
+    </script>
+</body>
+
+</html>

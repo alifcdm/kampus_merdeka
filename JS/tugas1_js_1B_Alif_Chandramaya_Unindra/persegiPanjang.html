@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Persegi Panjang</title>
+</head>
+
+<body>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Persegi Panjang</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Masukan nilai panjang</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="input_pjg"></td>
+                </tr>
+                <tr>
+                    <td>Masukan nilai lebar</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="input_lebar"></td>
+                </tr>
+                <tr>
+                    <td><button onclick="hitung()">Hitung</button></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Luas Persegi Panjang</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="luas" disabled></td>
+                </tr>
+                <tr>
+                    <td>Keliling Persegi Panjang</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="keliling" disabled></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <script>
+        const phi = 3.14;
+        let luas;
+        let keliling;
+        let panjang;
+        let lebar;
+        function hitung() {
+            panjang = parseFloat(document.getElementById("input_pjg").value);
+            lebar = parseFloat(document.getElementById("input_lebar").value);
+            luas = panjang * lebar;
+            keliling = 2 * (panjang + lebar);
+            document.getElementById('luas').value = luas;
+            document.getElementById('keliling').value = keliling;
+        }
+    </script>
+</body>
+
+</html>

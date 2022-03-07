@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 align="center">Daftar Siswa</h1>
+    <table align="center" border="1" cellpadding="4" width="500px">
+        <thead>
+            <tr bgcolor="yellow">
+                <th>No</th>
+                <th>Nama</th>
+                <th>Alamat</th>
+            </tr>
+        </thead>
+        <tbody id="data" align="left">
+        </tbody>
+    </table>
+    <script>
+        let text = "";
+        let i = 11;
+        for (i = 1; i < 11; i++) {
+            let warna = (i % 2 == 0) ? "grey" : "greenyellow";
+
+            let a = "<tr bgcolor=" + warna + ">" + "<td>" + i + "</td><td>" + "Siswa " + i + "</td>" + "<td>" + "Jl. Margonda No." + i +
+                "</td>" + "</tr>";
+            text += a;
+        }
+        document.getElementById("data").innerHTML = text;
+    </script>
+</body>
+
+</html>
