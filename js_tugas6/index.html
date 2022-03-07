@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_TUGAS6</title>
+    <style>
+        form {
+            box-shadow: 10px 10px 10px rgba(197, 197, 197, 0.4);
+        }
+
+        table,
+        tr,
+        td,
+        th {
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        tr,
+        td,
+        th {
+            border: 0px;
+        }
+
+        th {
+            background-color: blanchedalmond;
+        }
+
+        #bttn {
+            background-color: blanchedalmond;
+        }
+
+        input {
+            width: 200px;
+            height: 20px;
+            border-radius: 5px;
+        }
+
+        button {
+            text-align: center;
+            width: 40px;
+            height: 35px;
+            margin: 5px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <table align="center" cellpadding="10" border="1">
+        <tr>
+            <th colspan="2">Kalkulator</th>
+        </tr>
+        <tr>
+            <td>
+                <label for="angka1">Angka 1 </label>
+            </td>
+            <td><input type="number" name="angka1" id="angka1" onfocus="num1(this)"></td>
+        </tr>
+        <tr>
+            <td>
+                <label for="angka2">Angka 2</label>
+            </td>
+            <td><input type="number" name="angka2" id="angka2" onfocus="num2(this)"></td>
+        </tr>
+        <tr>
+            <td>
+                <label for="hasil">Hasil</label>
+            </td>
+            <td><input type="number" name="hasil" id="hasil" disabled></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center" id="bttn">
+                <button onclick="plus()">+</button>
+                <button onclick="kurang()">-</button>
+                <button onclick="kali()">x</button>
+                <button onclick="pangkat()">^</button>
+                <button onclick="batal()" style="width: 80px;">Batal</button>
+            </td>
+        </tr>
+    </table>
+    <script src="js.js"></script>
+</body>
+
+</html>
