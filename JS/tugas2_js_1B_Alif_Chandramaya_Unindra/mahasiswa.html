@@ -23,11 +23,11 @@
     </table>
     <script>
         let text = "";
-        let i = 11;
-        for (i = 1; i < 11; i++) {
+        for (let i = 1; i < 11; i++) {
             let warna = (i % 2 == 0) ? "grey" : "greenyellow";
 
-            let a = "<tr bgcolor=" + warna + ">" + "<td>" + i + "</td><td>" + "Siswa " + i + "</td>" + "<td>" + "Jl. Margonda No." + i +
+            let a = "<tr bgcolor=" + warna + ">" + "<td>" + i + "</td><td>" + "Siswa " + i + "</td>" + "<td>" +
+                "Jl. Margonda No." + i +
                 "</td>" + "</tr>";
             text += a;
         }

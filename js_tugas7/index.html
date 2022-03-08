@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tes Gempa</title>
+    <style>
+        form {
+            border-radius: 10px;
+            border: 1px solid grey;
+            box-shadow: 10px 10px 10px rgba(197, 197, 197, 0.4);
+            width: 450px;
+            margin: auto;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        table {
+            margin: auto;
+        }
+
+        .tbdata {
+            text-align: center;
+        }
+
+        .tbform {
+            text-align: left;
+        }
+
+        input {
+            width: 200px;
+            height: 20px;
+            border-radius: 5px;
+            border: 1px solid grey;
+        }
+
+        #bttn {
+            width: 100px;
+            height: 40px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body align="center">
+    <form class="tbform">
+        <h3>Silahkan masukkan lokasi dan skala gempa yang terjadi di tempat anda</h3>
+        <table cellpadding="10">
+            <tr>
+                <td><label for="lok">Lokasi :</label></td>
+                <td><input type="text" name="lok" id="lok"></td>
+            </tr>
+            <tr>
+                <td><label for="skal">Skala :</label></td>
+                <td><input type="number" name="skal" id="skal"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <input type="button" value="Kirim" onclick="panggil()" id="bttn">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br>
+    <h3>Daftar lokasi, kekuatan serta dampak gempa di berbagai tempat</h3>
+    <table border="1" cellpadding="10" class="tbdata">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Lokasi</th>
+                <th>Skala</th>
+                <th>Dampak</th>
+            </tr>
+        </thead>
+        <tbody id="data">
+        </tbody>
+    </table>
+    <script src="js.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="form">
+        <input type="text" name="nama" id="nama">
+        <button onclick="salam()">Klik</button>
+    </form>
+    <script>
+        function salam(nama) {
+            //To access the elements of the form, you get the form element first:
+            const form = document.getElementById("form");
+            //And use index, id, or name to access the element. The following accesses the first form element:
+            const nm = form.elements['nama'];
+            // getting the element's value
+            let name = nm.value;
+
+            let sapa = (name == "") ? "Nama belum diinput!" : `Selamat Pagi ${name}`;
+            alert(sapa);
+        }
+    </script>
+</body>
+
+</html>
