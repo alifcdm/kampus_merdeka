@@ -1,12 +1,11 @@
 let i = 1;
-//membuat array untuk data yang akan ditampilkan
+//membuat array untuk seluruh data yang telah masuk
 let tempData = [];
-
 class Gempa {
   angka = 0;
   tempat = '';
   dampak = '';
-  //constructor untuk mengambil nilai skala dan lokasi
+
   constructor(lokasi, skala) {
     this.tempat = lokasi;
     this.angka = skala;
@@ -23,7 +22,7 @@ class Gempa {
     }
 
     let text = '';
-    //membuat array kosong
+    //membuat array untuk data yang akan ditampilkan
     var data = { skala: this.angka, lok: this.tempat, dampak: this.dampak };
     tempData.push(data);
     console.log(tempData);
@@ -36,12 +35,9 @@ class Gempa {
     </tr>`;
     text += a;
     i += 1;
-    //menambahkan data yang telah diinput ke html
+    //memanggil data yang telah diinput ke html
     document.getElementById('data').innerHTML += text;
   }
-
-  //function untuk menyimpan data yang telah diinput
-  datas() {}
 }
 
 //membuat function untuk dipanggil dionclick
@@ -54,10 +50,7 @@ function panggil() {
 
   if (skal != '' && skal != 0 && lok != 0 && lok != '') {
     panggilDampak.hitungDampak();
-    panggilDampak.datas();
   } else {
     alert('Harap input semua data terlebih dahulu!');
   }
 }
-
-// console.log(datas());
