@@ -145,3 +145,11 @@ $('document').ready(function () {
   });
 });
 //akhir script tugas 2
+
+//script connect ke link nurul fikri
+$('document').ready(function () {
+  $('a').click(function () {
+    alert('Selamat Datang di website Nurul Fikri Computer');
+  });
+});
+//akhir script connect ke link nurul fikri
