@@ -1,0 +1,21 @@
+section {
+  padding-top: 5rem;
+}
+button {
+  margin: 10px 0 10px 12px;
+}
+img {
+  height: 610px;
+}
+.accordion {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.card {
+  margin-top: 500px;
+  margin-bottom: 100px;
+}
+#tables {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}

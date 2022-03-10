@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Carousel -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../images/istiqlal_jakarta.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-sm-block">
+                    <h3>Masjid Istiqlal Jakarta</h3>
+                    <p>Masjid ini terletak di Provinsi DKI Jakarta, tepatnya di kota Jakarta Pusat.</p>
+                    <p><a href="#"><button type="button" class="btn btn-primary">Learn More</button></a></p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../images/masjid_depok.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-sm-block">
+                    <h3>Masjid Kubah Emas Dian Al-Mahri Depok</h3>
+                    <p>Masjid Kubah Emas Dian Al-Mahri Depok terletak di Provinsi Jawa Barat, tepatnya di kota Depok.
+                    </p>
+                    <p><a href="#"><button type="button" class="btn btn-primary">Learn More</button></a></p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../images/masjid_aceh.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-sm-block">
+                    <h3>Masjid Raya Baiturrahman</h3>
+                    <p>Masjid Raya Baiturrahman terletak di Provinsi Aceh, tepatnya di kota Banda Aceh.</p>
+                    <p><a href="#"><button type="button" class="btn btn-primary">Learn More</button></a></p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- Akhir Carousel -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+        <div class="container ">
+            <a class="navbar-brand" href="#home">
+                Alif Chandramaya
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Akhir Navbar -->
+
+    <!-- Content -->
+    <section>
+        <div class="container">
+            <div class="row text-center mb-4">
+                <div class="col">
+                    <h2>Beragam content yang ada di web ini</h2>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-sm-2 mx-auto">
+                    <p>Tombol ganti tema web!</p>
+                    <button id="changebg1" type="button" class="btn btn-light btn-lg">Light Mode</button>
+                    <button id="changebg2" type="button" class="btn btn-dark btn-lg">Dark Mode</button>
+                </div>
+                <div class="col-sm-8 text-center">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col"><a href="#accordion">Accordion</a></th>
+                                <th scope="col"><a href="#tables">Tables</a></th>
+                                <th scope="col"><a href="#card">Card</a></th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div id="accordion" class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    Accordion Item #1
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                    demonstrate the <code>.accordion-flush</code> class. This is the first item's
+                                    accordion body.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    Accordion Item #2
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                    demonstrate the <code>.accordion-flush</code> class. This is the second item's
+                                    accordion body. Let's imagine this being filled with some actual content.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                    aria-controls="flush-collapseThree">
+                                    Accordion Item #3
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                    demonstrate the <code>.accordion-flush</code> class. This is the third item's
+                                    accordion body. Nothing more exciting happening here in terms of content, but just
+                                    filling up the space to make it look, at least at first glance, a bit more
+                                    representative of how this would look in a real-world application.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <table id="tables" class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">First</th>
+                                <th scope="col">Last</th>
+                                <th scope="col">Handle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td colspan="2">Larry the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div id="card" class="card">
+                        <div class="card-header">
+                            Quote
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>A well-known quote, contained in a blockquote element.</p>
+                                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source
+                                        Title</cite></footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                            The current link item
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+                        <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+                        <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+                        <a class="list-group-item list-group-item-action disabled">A disabled link item</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Akhir Content -->
+
+    <!-- FOOTER -->
+    <footer class="bg-light text-center pt-3 mt-5">
+        <p>
+            Created By <a href="https://www.instagram.com/alif_chandra10/" class="text-dark fw-bold">Alif
+                Chandramaya</a>
+        </p>
+    </footer>
+    <!-- Akhir FOOTER -->
+    <!-- JS from CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <!-- JS Tambahan -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#changebg1").click(function () {
+                $("body").css("background-color", "white");
+                $("div").css("color", "black")
+            });
+            $("#changebg2").click(function () {
+                $("body").css("background-color", "black");
+                $("div").css("color", "white")
+            });
+        });
+    </script>
+</body>
+
+</html>
