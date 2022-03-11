@@ -117,102 +117,134 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col"><a href="#accordion">Accordion</a></th>
-                                <th scope="col"><a href="#tables">Tables</a></th>
-                                <th scope="col"><a href="#card">Card</a></th>
-                            </tr>
-                        </thead>
-                    </table>
-                    <div id="accordion" class="accordion accordion-flush" id="accordionFlushExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                    aria-controls="flush-collapseOne">
-                                    Accordion Item #1
-                                </button>
-                            </h2>
-                            <div id="flush-collapseOne" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                                    demonstrate the <code>.accordion-flush</code> class. This is the first item's
-                                    accordion body.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
-                                    aria-controls="flush-collapseTwo">
-                                    Accordion Item #2
-                                </button>
-                            </h2>
-                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                                    demonstrate the <code>.accordion-flush</code> class. This is the second item's
-                                    accordion body. Let's imagine this being filled with some actual content.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                    aria-controls="flush-collapseThree">
-                                    Accordion Item #3
-                                </button>
-                            </h2>
-                            <div id="flush-collapseThree" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                                    demonstrate the <code>.accordion-flush</code> class. This is the third item's
-                                    accordion body. Nothing more exciting happening here in terms of content, but just
-                                    filling up the space to make it look, at least at first glance, a bit more
-                                    representative of how this would look in a real-world application.</div>
-                            </div>
-                        </div>
-                    </div>
-                    <table id="tables" class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
+                                <th scope="col" class="accordion"><a href="#accordion">Accordion</a></th>
+                                <th scope="col" class="tables"><a href="#tables">Tables</a></th>
+                                <th scope="col" class="cards"><a href="#cards">Card</a></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <td id="accordion" colspan="3">
+                                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="flush-headingOne">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                                    aria-expanded="false" aria-controls="flush-collapseOne">
+                                                    Accordion Item #1
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                                aria-labelledby="flush-headingOne"
+                                                data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">Placeholder content for this accordion,
+                                                    which is intended to
+                                                    demonstrate the <code>.accordion-flush</code> class. This is the
+                                                    first item's
+                                                    accordion body.</div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="flush-headingTwo">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                                    aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                    Accordion Item #2
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                                aria-labelledby="flush-headingTwo"
+                                                data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">Placeholder content for this accordion,
+                                                    which is intended to
+                                                    demonstrate the <code>.accordion-flush</code> class. This is the
+                                                    second item's
+                                                    accordion body. Let's imagine this being filled with some actual
+                                                    content.</div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="flush-headingThree">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                                    aria-expanded="false" aria-controls="flush-collapseThree">
+                                                    Accordion Item #3
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                                aria-labelledby="flush-headingThree"
+                                                data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">
+                                                    <p> Placeholder content for this accordion,
+                                                        which is intended to
+                                                        demonstrate the <code>.accordion-flush</code> class. This is the
+                                                        third item's
+                                                        accordion body. Nothing more exciting happening here in terms of
+                                                        content, but just
+                                                        filling up the space to make it look, at least at first glance,
+                                                        a
+                                                        bit more
+                                                        representative of how this would look in a real-world
+                                                        application.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
+                                <td id="tables" colspan="3">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">First</th>
+                                                <th scope="col">Last</th>
+                                                <th scope="col">Handle</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                                <td>@fat</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td colspan="2">Larry the Bird</td>
+                                                <td>@twitter</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
                             </tr>
                             <tr>
-                                <th scope="row">3</th>
-                                <td colspan="2">Larry the Bird</td>
-                                <td>@twitter</td>
+                                <td id="cards" colspan="3">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <p>Quote</p>
+                                        </div>
+                                        <div class="card-body">
+                                            <blockquote class="blockquote mb-0">
+                                                <p>A well-known quote, contained in a blockquote element.</p>
+                                                <footer class="blockquote-footer">Someone famous in <cite
+                                                        title="Source Title">Source
+                                                        Title</cite></footer>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
-                    <div id="card" class="card">
-                        <div class="card-header">
-                            Quote
-                        </div>
-                        <div class="card-body">
-                            <blockquote class="blockquote mb-0">
-                                <p>A well-known quote, contained in a blockquote element.</p>
-                                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source
-                                        Title</cite></footer>
-                            </blockquote>
-                        </div>
-                    </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="list-group">
@@ -247,11 +279,32 @@
         $(document).ready(function () {
             $("#changebg1").click(function () {
                 $("body").css("background-color", "white");
-                $("div").css("color", "black")
+                $("div").css("color", "black");
+                $("tr").css("color", "black");
+                $("p").css("color", "black")
             });
             $("#changebg2").click(function () {
                 $("body").css("background-color", "black");
-                $("div").css("color", "white")
+                $(".card-header").css("color", "black");
+                $(".blockquote").css("color", "black");
+                $("div").css("color", "white");
+                $("tr").css("color", "white");
+                $("p").css("color", "black")
+            });
+            $(".accordion").click(function () {
+                $('#accordion').show('fast');
+                $('#cards').hide('fast');
+                $('#tables').hide('fast');
+            });
+            $(".cards").click(function () {
+                $('#cards').show('fast');
+                $('#accordion').hide('fast');
+                $('#tables').hide('fast');
+            });
+            $(".tables").click(function () {
+                $('#tables').show('fast');
+                $('#cards').hide('fast');
+                $('#accordion').hide('fast');
             });
         });
     </script>

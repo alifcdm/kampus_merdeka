@@ -7,15 +7,12 @@ button {
 img {
   height: 610px;
 }
-.accordion {
-  margin-top: 100px;
-  margin-bottom: 100px;
+#accordion {
+  display: none;
 }
-.card {
-  margin-top: 500px;
-  margin-bottom: 100px;
+#cards {
+  display: none;
 }
 #tables {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  display: none;
 }
